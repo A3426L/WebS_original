@@ -1,0 +1,11 @@
+<h1>Search Results</h1>
+<% if @results %>
+  <ul>
+    <% @results.each do |result| %>
+      <li><a href="/person/<%= result['person_id'] %>"><%= result['first_name'] %> <%= result['last_name'] %></a></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No results found.</p>
+<% end %>
+<a href="/">Back to search</a>

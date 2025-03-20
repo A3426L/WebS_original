@@ -1,0 +1,11 @@
+<p class = "bg-red-300 text-6xl">あいうえお</p>
+<!--<button onclick="findNearestLocations()">test</button>-->
+<script src="js/shelter.js"></script>
+
+<!--<script src="js/personfinder.js"></script>-->
+<form method='post' action='/person/post'>
+  <input type="hidden" name="authenticity_token" value="<%= session[:csrf] %>">
+  <button type='submit'>書き込み</button>
+</form>
+
+<p> <%= @results %></p>
